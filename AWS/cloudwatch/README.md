@@ -2,8 +2,8 @@
 
 #### Copy both files to /usr/lib/zabbix/externalscripts/
 ```
-git clone https://github.com/DBigCloud/Scripts
-cp AWS/cloudwatch/* /usr/lib/zabbix/externalscripts/
+git clone https://github.com/DBigCloud/Scripts/tree/master/AWS/cloudwatch
+cp cloudwatch_metrics.sh cloudwatch_metrics.py /usr/lib/zabbix/externalscripts/
 ```
 
 #### In Zabbix, create a Item, type external check, in key field call the cloudwatch_metrics.sh script.
