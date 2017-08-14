@@ -14,11 +14,11 @@ else:
 	namespace = sys.argv[1] # e.g. 'AWS/CloudFront'
 	metricname = sys.argv[2] # e.g. Requests
 	dimname = sys.argv[3] # e.g. DistributionId
-	dimvalue = sys.argv[4] # e.g. ZONE
+	dimvalue = sys.argv[4] # e.g. Distribution ID XXXXXXXX
 	statistic = sys.argv[5] # [ Sum, Maximum, Minimum, SampleCount, Average ]
 	period = int(sys.argv[6]) # Period 1200
 	try:
-		print "AWS/CloudFront" "Requests" "DistributionId" "ZONE" "Sum"
+		print "AWS/CloudFront" "Requests" "DistributionId" "Distribution ID XXXXXXXX" "Sum"
 		metric = cw.get_metric_statistics(
 	        Namespace = namespace,
 	        MetricName = metricname,
